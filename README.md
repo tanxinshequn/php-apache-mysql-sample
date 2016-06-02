@@ -1,5 +1,3 @@
-# Test
-  Ubuntu 14.04
 # 如何开发一个 PHP + MySQL 的 Docker 化应用
 
 > 目标：基于典型的 LAMP 技术栈，用 Docker 镜像的方式搭建一个 Linux + Apache + MySQL + PHP 的应用 。
