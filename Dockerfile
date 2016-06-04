@@ -14,9 +14,13 @@ ENV APACHE_LOG_DIR /var/log/apache2
 RUN rm /var/www/html/index.html
 COPY ./discuz/ /var/www/html
 
+COPY s.sh /s.sh
+RUN chmod 777 /s.sh
+
 RUN chown www-data:www-data -R /var/www/html
 RUN chmod 777 -R /var/www/html
 
 EXPOSE 80
 
-CMD ["/usr/sbin/apache2ctl", " -D", "FOREGROUND"]
+
+CMD ["/s.sh"]
