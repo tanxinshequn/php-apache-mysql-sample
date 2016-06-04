@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y curl vim apache2 php5 mysql-client php5
 
 # apache2 configuration file
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-ENV APACHE_RUN_USER root
-ENV APACHE_RUN_GROUP root
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 
 RUN rm /var/www/html/index.html
@@ -21,10 +21,7 @@ RUN mkdir -p /var/tanxin
 RUN chown www-data:www-data -R /var/tanxin
 RUN chmod 777 -R /var/tanxin
 
-RUN usermod -u 1000 www-data
-RUN usermod -G root www-data
-
-VOLUME ["/var/www/html"]
+VOLUME /var/www/html
 
 EXPOSE 80
 
