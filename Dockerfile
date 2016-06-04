@@ -21,6 +21,10 @@ RUN mkdir -p /var/tanxin
 RUN chown www-data:www-data -R /var/tanxin
 RUN chmod 777 -R /var/tanxin
 
+VOLUME ["/var/www/html"]
+RUN chown www-data:www-data -R /var/www/html
+RUN chmod 777 -R /var/www/html
+
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", " -D", "FOREGROUND"]
