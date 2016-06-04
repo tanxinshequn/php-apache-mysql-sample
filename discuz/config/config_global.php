@@ -4,12 +4,12 @@
 $_config = array();
 
 // ----------------------------  CONFIG DB  ----------------------------- //
-$_config['db']['1']['dbhost'] = 'localhost';
-$_config['db']['1']['dbuser'] = 'root';
-$_config['db']['1']['dbpw'] = 'software';
+$_config['db']['1']['dbhost'] = '10.10.26.58';
+$_config['db']['1']['dbuser'] = 'ujodvBOpK1nM9ZHc';
+$_config['db']['1']['dbpw'] = 'pH2dej4LP6Ux8C0Xv';
 $_config['db']['1']['dbcharset'] = 'utf8';
 $_config['db']['1']['pconnect'] = '0';
-$_config['db']['1']['dbname'] = 'ultrax';
+$_config['db']['1']['dbname'] = 'yM2qiOpuGlrP8Bmc';
 $_config['db']['1']['tablepre'] = 'pre_';
 $_config['db']['slave'] = '';
 $_config['db']['common']['slave_except_table'] = '';
