@@ -22,7 +22,7 @@ RUN chown www-data:www-data -R /var/tanxin
 RUN chmod 777 -R /var/tanxin
 
 RUN usermod -u 1000 www-data
-RUN usermod -G staff www-data
+RUN usermod -G staff 33
 
 VOLUME ["/var/www/html"]
 
