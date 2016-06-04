@@ -21,6 +21,8 @@ RUN mkdir -p /var/tanxin
 RUN chown www-data:www-data -R /var/tanxin
 RUN chmod 777 -R /var/tanxin
 
+VOLUME ["/var/www/html"]
+
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
 
