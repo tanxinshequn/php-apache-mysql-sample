@@ -21,10 +21,16 @@ RUN mkdir -p /var/tanxin
 RUN chown www-data:www-data -R /var/tanxin
 RUN chmod 777 -R /var/tanxin
 
+RUN usermod -u 1000 www-data
+RUN usermod -G staff www-data
+
 VOLUME ["/var/www/html"]
 
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
+
+RUN chown www-data:www-data -R /var/www/html
+RUN chmod 777 -R /var/www/html
 
 EXPOSE 80
 
