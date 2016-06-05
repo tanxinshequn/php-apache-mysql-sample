@@ -21,14 +21,11 @@ RUN mkdir -p /var/tanxin
 RUN chown www-data:www-data -R /var/tanxin
 RUN chmod 777 -R /var/tanxin
 
-RUN chmod g+s /var/www/html 
-
 VOLUME /var/www/html
 
-RUN chmod g+s /var/www/html
 
 EXPOSE 80
 
 COPY ./start.sh /start.sh
 RUN chmod 777 /start.sh
-CMD ["/start.sh"]
+CMD /start.sh
