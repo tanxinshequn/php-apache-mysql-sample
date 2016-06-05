@@ -29,4 +29,6 @@ RUN chmod g+s /var/www/html
 
 EXPOSE 80
 
-CMD ["/usr/sbin/apache2ctl", " -D", "FOREGROUND"]
+COPY ./start.sh /start.sh
+RUN chmod 777 /start.sh
+CMD ["/start.sh"]
