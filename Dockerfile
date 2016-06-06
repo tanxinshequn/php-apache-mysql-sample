@@ -2,8 +2,8 @@ FROM ubuntu:14.04
 
 MAINTAINER Xin Tan <tanxinshequn@163.com>
 
-# install apache2 php5 curl
-RUN apt-get update && apt-get install -y curl vim apache2 php5 mysql-client php5-mysql php5-curl php5-gd
+# install apache2 php5 curl gd imagemagick
+RUN apt-get update && apt-get install -y curl vim apache2 php5 mysql-client php5-mysql php5-curl php5-gd imagemagick php5-imagick
 
 # apache2 configuration file
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
