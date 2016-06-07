@@ -23,6 +23,8 @@ RUN chmod 777 -R /var/tanxin
 
 VOLUME /var/www/html
 
+RUN echo "Asia/Shanghai" > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
 
 EXPOSE 80
 
